@@ -6,6 +6,7 @@ import { Loading } from './src/components/Loading';
 import { SignIn } from './src/screens/SignIn';
 
 import { THEME } from './src/styles/theme'
+import {  AuthContextProvider } from "./src/contexts/AuthContext";
 
 export default function App() {
 
@@ -14,6 +15,7 @@ export default function App() {
 
   return (
     <NativeBaseProvider theme={THEME}>
+      <AuthContextProvider>
       <StatusBar 
       barStyle="light-content"
       backgroundColor='trasparent' 
@@ -21,7 +23,7 @@ export default function App() {
       />
 
       {fontsLoaded ? <SignIn /> : <Loading />}
-  
+      </AuthContextProvider>
     </NativeBaseProvider>
   );
 }
