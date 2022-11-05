@@ -10,7 +10,6 @@ export function SignIn() {
 const {signIn, user} = useAuth()
 
 
-console.log('DADOS DO USUARIO =>', user)
 
   return (
     <Center
